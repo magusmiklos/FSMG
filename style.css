@@ -1,0 +1,278 @@
+:root {
+    --color1: #65B891;
+    --color2: #F3C98B;
+    --color3: #FF6B6B;
+    --color4: #36393B;
+    --color5: #F2E9E4;
+}
+
+body {
+    background: rgb(54,57,59);
+    background: radial-gradient(circle, rgba(54,57,59,1) 0%, rgba(8,7,8,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.game-cont , .rule{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vw;
+}
+
+.rule {
+    display: flex;
+    flex-direction: column;
+}
+
+.game , .Irules{
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.game {
+    grid-template-columns: repeat(25, 1fr);
+}
+
+.Irules {
+    padding: 10px;
+    margin: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ruleBox {
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: rgba(8, 7, 8,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+}
+
+.cube {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    border-radius: 2.5px;
+}
+
+.big {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+}
+
+.false {
+    background-color: var(--color4);
+}
+
+.finish {
+    background-color: var(--color3);
+}
+
+.wall {
+    background-color: var(--color2);
+}
+
+.true {
+    background-color: var(--color1);    
+}
+
+.play {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgba(8, 7, 8,0.3);
+    backdrop-filter: blur(10px);
+    width: 200px;
+    height: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.triangle {
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid var(--color5);
+	border-bottom: 25px solid transparent;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.arrow {
+    width: 0;
+	height: 0;
+	border-top: 12.5px solid transparent;
+	border-left: 25px solid var(--color5);
+	border-bottom: 12.5px solid transparent;
+    position: relative;
+    
+}
+
+.arrow-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.re {
+    user-select: none;
+    font-family: Lucida Sans Unicode;
+    color: var(--color5);
+    font-size: xx-large;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(8, 7, 8,0.3);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 25px;
+    cursor:default;
+}
+
+.reload-cont {
+    display: flex;
+    justify-content:space-around;
+}
+
+.next-cont {
+    display: flex;
+    justify-content:space-around;
+}
+
+.next {
+    user-select: none;
+    font-family: Lucida Sans Unicode;
+    color: var(--color5);
+    font-size: xx-large;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: rgba(8, 7, 8,0.3);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    border-bottom-left-radius: 25px;
+    cursor:default;
+}
+
+/* mobile support */
+
+@media only screen and (max-width: 1600px) {
+    .ruleBox {
+        margin-right: 5vw;
+    }
+
+    .game-cont {
+        margin-left: 5vw;
+    }
+
+    .rule {
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .cube {
+        width: 1.5vw;
+        height: 1.5vw;
+        margin: 0.5px;
+        border-radius: 2px;
+    }
+    
+    .big {
+        width: 2.5vw;
+        height: 2.5vw;
+        margin: 1px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cont {
+        flex-direction: column;
+    }
+    .rule {
+        margin: 0;
+        margin-top: 2vw;
+    }
+    .game-cont {
+        margin-left: 0;
+        margin-top: 75px;
+        margin-bottom: 25px;
+    }
+    .ruleBox {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        border-radius: 10px;
+    }
+
+    .cube {
+        width: 2vw;
+        height: 2vw;
+        margin: 0.5px;
+    }
+    .big {
+        width: 4vw;
+        height: 4vw;
+        margin: 1px;
+    }
+    .triangle {
+        border-top: 12.5px solid transparent;
+        border-left: 25px solid var(--color5);
+        border-bottom: 12.5px solid transparent;
+    }
+
+    .arrow {
+        border-top: 7.5px solid transparent;
+        border-left: 15px solid var(--color5);
+        border-bottom: 7.5px solid transparent;
+    }
+    .play {
+        width: 100px;
+        height: 50px;
+        border-radius: 12.5px;
+    }
+    .Irules {
+        padding: 15px;
+        border-radius: 10px;
+        margin: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .game-cont {
+        margin-top: 75px;
+    }
+    .cube {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 2px;
+    }
+    .big {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 2px;
+    }
+    .ruleBox {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
