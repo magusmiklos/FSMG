@@ -4,6 +4,7 @@
     --color3: #FF6B6B;
     --color4: #36393B;
     --color5: #F2E9E4;
+    --color6: #3a86ff;
 }
 
 body {
@@ -77,10 +78,15 @@ body {
 .wall {
     background-color: var(--color2);
 }
+.ice {
+    background-color: var(--color6);
+}
 
 .true {
     background-color: var(--color1);    
 }
+
+
 
 .play {
     position: absolute;
