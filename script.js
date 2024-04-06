@@ -36,7 +36,7 @@ function setUpGame(cubes){
     else{
         mapId = parseInt(sessionMapId, 10);
     }
-    let map = maps[maps.length-1];
+    let map = maps[mapId];
     
 
     //get finishes
